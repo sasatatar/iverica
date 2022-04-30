@@ -1,19 +1,5 @@
 import { useState } from "react";
-// import { getDataGrouper } from "./dataGrouper";
 import { elements } from "./elements";
-// const dataGrouper = getDataGrouper([
-//   {
-//     key: "cat",
-//     getKey: (el) => el.category,
-//     mapper: ({ key, records, groups }) => {
-//       return {
-//         category: key,
-//         records,
-//         groups,
-//       };
-//     },
-//   },
-// ]);
 
 export function App() {
   const [query, setQuery] = useState("");
@@ -24,9 +10,6 @@ export function App() {
       el.width.toString().indexOf(query) === 0
     );
   });
-
-  // console.log(filteredElements);
-  // console.log(dataGrouper(filteredElements));
 
   return (
     <div className="p-4 h-full">
